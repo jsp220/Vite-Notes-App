@@ -36,11 +36,11 @@ function App() {
   const [notes, setNotes] = useLocalStorage<RawNote[]>("NOTES", [])
   const [tags, setTags] = useLocalStorage<Tag[]>("TAGS", [])
 
-  const notesWithTags = useMemo(() => {
-    return notes.map(note => {
-      return { ...note, tags: tags.filter(tag => note.tagIds.includes(tag.id)) }
-    })
-  }, [notes, tags])
+  // const notesWithTags = useMemo(() => {
+  //   return notes.map(note => {
+  //     return { ...note, tags: tags.filter(tag => note.tagIds.includes(tag.id)) }
+  //   })
+  // }, [notes, tags])
 
   function onCreateNote({ tags, ...data }: NoteData) {
     setNotes(prevNotes => {
@@ -80,4 +80,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
