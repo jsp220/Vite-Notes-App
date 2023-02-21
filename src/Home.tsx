@@ -9,7 +9,7 @@ export type HomeProps = {
 
 export default function Home({ availableTags }: HomeProps) {
   return <>
-    <Row>
+    <Row className="align-items-center mb-4">
       <Col><h1>Notes</h1></Col>
       <Col xs="auto">
         <Stack gap={2} direction="horizontal">
